@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<locale.h>
+#include<stdlib.h>
 void insertionSort(float a[], int tamanho){
 	float chave;
 	int i;
@@ -12,12 +13,13 @@ void insertionSort(float a[], int tamanho){
 			}
 		a[i + 1] = chave;
 			}
-	}
+			return;
+	} // faz uma ordenação por inserção
 int main(){
-	setlocale(LC_ALL, "C");
+	setlocale(LC_ALL, "C"); 
 	int tamanho, n=0;
 	printf("Qual tamanho de array voce escolhe?\n");
-	scanf("%d",&tamanho);
+	scanf("%d", &tamanho);
 	float a[tamanho];
 	while(n<tamanho){
 		printf("Dígite um número para compor a array\n");
@@ -30,4 +32,5 @@ int main(){
 			printf("%.2f ", a[i]);
 			}
 		return 0;
+	system("pause");
 	}
